@@ -1,6 +1,6 @@
 version: "3.3"
 services: 
   web:
-    image: bvvinay/prim:latest
+    image: bvvinay/task1:latest
     ports:
-     - "82:80"
+     - "80:80"
