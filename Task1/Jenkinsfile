@@ -1,0 +1,48 @@
+pipeline{
+    agent any
+    stages{
+        
+        stage("clone"){
+            steps{
+                echo "clone"
+                git url: "https://gitlab.com/vinaybv77716/prime.git" , branch: "master"
+            }
+        }
+        
+        
+         stage("create_tar_file"){
+            steps{
+                echo "create_tar_file"
+                sh 'tar -czvf dox.tar.gz *'
+            }
+        }
+        
+        
+         stage("build_a_image"){
+            steps{
+                echo "build_a_image"
+                sh 'docker build -t bvvinay/prime:latest .'
+            }
+        }
+        
+        
+         stage("push_to_docker_hub"){
+            steps{
+                echo "push_to_docker_hub"
+                sh 'docker login -u bvvinay -p Bvv@22188'
+                sh 'docker push bvvinay/prime:latest'
+            }
+        }
+        
+        
+         stage("Deploy"){
+            steps{
+                echo "Deploy"
+                sh 'docker-compose down && docker-compose up -d'
+                
+            }
+        }
+        
+        
+    }
+}

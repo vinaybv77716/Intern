@@ -1,0 +1,192 @@
+*{
+    margin: 0px;
+}
+
+.navbar{
+    height: 30px;
+    width: 700px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 316px;
+    position: fixed;
+    top: 0px;
+    border-radius: 10px;
+}
+.home select{
+    border: none;
+    background-color: black;
+    color: rgb(154, 170, 170);
+    width: 60px;
+    height: 30px;
+    width:60px ;
+}
+.store select{
+    border: none;
+    background-color: black;
+    color: rgb(154, 170, 170);
+    width: 60px;
+    height: 30px;
+}
+.cata select{
+    border: none;
+    background-color: black;
+    color: rgb(154, 170, 170);
+    height: 30px;
+    width: 90px;
+}
+.try select{
+    border: none;
+    background-color: black;
+    color: rgb(154, 170, 170);
+    height: 30px;
+}
+.en select{
+    border: none;
+    background-color: black;
+    color: rgb(154, 170, 170);
+    width: 40px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: rgb(154, 170, 170);
+}
+/********************part2**********************/
+.welcome{
+    width: 100%;
+    height: 510px;
+    background-color:black;
+    background-image: url(https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+}
+.txt{
+    padding-top: 120px;
+    padding-left: 66px;
+}
+.txt h1{
+    font-size: 35px;
+    color: white;
+}
+.txt h2{
+    padding-top: 32px;
+    color: white;
+}
+.butt{
+    padding-left: 66px;
+    padding-top: 15px;
+    
+}
+.butt button{
+    height: 50px;
+    width: 280px;
+    background-color: rgb(0, 102, 137);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+/********************part3**********************/
+.part3{
+    width: 100%;
+    height: 478px;
+    background-color: aquamarine;
+    background-image: url(https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/MLP/TVOD/TVOD_MLP_Left.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.txt2{
+    padding-top: 115px;
+    padding-left: 737px;
+}
+.butt2{
+    padding-left: 737px;
+    padding-top: 52px;
+}
+.txt2 h1{
+    font-size: 35px;
+    color: white;
+}
+.txt2 h2{
+    padding-top: 35px;
+    font-size: 20px;
+    color: white;
+}
+.butt2 button{
+    height: 50px;
+    width: 280px;
+    background-color: rgb(0, 102, 137);
+    color: white;
+    border: none;
+    border-radius: 5px;   
+}
+/********************part4**********************/
+.part4{
+    display: flex;
+}
+.rcb{
+width: 550px;
+height: 560px;
+/* background-color: aquamarine; */
+margin-left: 70px;
+margin-top: 40px;
+}
+.you h1{
+    font-weight: 100;
+    font-size: 40px;
+}
+.wit{
+    padding-top: 27px;
+}
+.wit p{
+font-size: 20px;
+color: rgb(66, 69, 66);
+}
+.csk{
+    width: 600px;
+    height: 560px;
+    /* background-color:aqua; */
+    margin-left: 73px;
+    padding-top: 10px;
+}
+/*****************Hover******************/
+.csk img:hover{
+    box-shadow: 0px 0px 30px  black;
+    transition: 0.5s;
+
+}
+.home>select:hover{
+    color: white;    
+    background-color: rgb(25, 30, 37);
+    transition: 0.5s;
+}
+.store>select:hover{
+    color: white;
+    background-color: rgb(25, 30, 37);
+    transition: 0.5s;
+}
+.cata>select:hover{
+    color: white;
+    background-color: rgb(25, 30, 37);
+    transition: 0.5s;
+}
+.try>h4:hover{
+    color: white;
+    background-color: rgb(25, 30, 37);
+    transition: 0.5s;
+}
+.en>select:hover{
+    color: white;
+    background-color: rgb(25, 30, 37);
+    transition: 0.5s;
+}
+.butt>button:hover{
+    background-color: rgb(0, 188, 252);
+    transition: 0.5s;
+}
+.butt2>button:hover{
+    background-color: rgb(0, 188, 252);
+    transition: 0.5s;
+}
