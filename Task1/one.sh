@@ -21,7 +21,7 @@ echo "###########install Dockers##############"
 
 sudo apt install docker.io -y
 sudo apt install docker-compose -y
-#sudo chown /var
+sudo chown $USER  /var/run/docker.sock
 sudo chown  jenkins:jenkins /var/www/html/
 sudo chown  jenkins:jenkins /var/www/html
 
