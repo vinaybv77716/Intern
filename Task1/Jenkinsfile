@@ -4,21 +4,21 @@ pipeline{
         
         stage("clone"){
             steps{
-                echo "clone"
-                git url: "https://github.com/vinaybv77716/Intern.git" , branch: "main"
+                 echo "clone"
+                 git url: "https://github.com/vinaybv77716/Intern.git" , branch: "main"
             }
         }
         
         
          stage("create_tar_file"){
             steps{
-                echo "create_tar_file"
-                sh 'pwd'
-                sh 'ls'
-                sh 'tar -czvf dox.tar.gz /var/lib/jenkins/workspace/Task1.3/Task1/*'
-                sh 'mv dox.tar.gz Task1/'
-                 sh 'ls Task1/'
-                 sh 'ls'
+                 echo "create_tar_file"
+                // sh 'pwd'
+                // sh 'ls'
+                 sh 'tar -czvf dox.tar.gz /var/lib/jenkins/workspace/Task1.3/Task1/*'
+                 sh 'mv dox.tar.gz Task1/'
+                //  sh 'ls Task1/'
+                //  sh 'ls'
             }
         }
         
@@ -26,7 +26,7 @@ pipeline{
          stage("build_a_image"){
             steps{
                 echo "build_a_image"
-                sh 'docker build -t bvvinay/task1:latest  /var/lib/jenkins/workspace/Task1.3/Task1/.'
+             sh 'docker build -t bvvinay/task1:latest  /var/lib/jenkins/workspace/Task1.3/Task1/.'
             }
         }
         
@@ -34,7 +34,7 @@ pipeline{
          stage("push_to_docker_hub"){
             steps{
                 echo "push_to_docker_hub"
-                sh 'docker login -u bvvinay -p Bvv@22188'
+                 sh 'docker login -u bvvinay -p Bvv@22188'
               sh 'docker push bvvinay/task1:latest'
             }
         }
@@ -43,15 +43,16 @@ pipeline{
          stage("Deploy"){
             steps{
                 echo "Deploy"
-                sh 'ls /var/lib/jenkins/workspace/Task1.3/Task1/'
-                sh 'pwd'
-                sh 'ls'
-                sh 'cp /var/lib/jenkins/workspace/Task1.3/Task1/docker-compose.yaml ..'
-                 sh 'ls'
-                 sh 'cat docker-compose.yaml'
-               sh ' docker-compose down '
+            //     sh 'ls /var/lib/jenkins/workspace/Task1.3/Task1/'
+            //     sh 'pwd'
+            //     sh 'ls'
+            //     sh 'cp /var/lib/jenkins/workspace/Task1.3/Task1/docker-compose.yaml ..'
+            //      sh 'ls'
+            //      sh 'cat docker-compose.yaml'
+            sh ' cd /var/lib/jenkins/workspace/Task1.3/Task1/ && docker-compose down'
+            sh ' cd /var/lib/jenkins/workspace/Task1.3/Task1/ && docker-compose up -d '
                
-                //sh ' /var/lib/jenkins/workspace/Task1.3/Task1/docker-compose up -d --build'
+            //     //sh ' /var/lib/jenkins/workspace/Task1.3/Task1/docker-compose up -d --build'
                 
             }
         }

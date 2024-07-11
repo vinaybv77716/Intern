@@ -1,6 +1,6 @@
 version: "3.3"
 services: 
   web:
-    build: Task1/.
+    build: .
     ports:
      - "82:80"
