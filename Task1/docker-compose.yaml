@@ -1,6 +1,6 @@
 version: "3.3"
 services: 
   web:
-    image: bvvinay/task1:latest
+    build: .
     ports:
-     - "80:80"
+     - "82:80"
